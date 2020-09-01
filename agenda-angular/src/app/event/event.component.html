@@ -1,3 +1,18 @@
-<h1> {{value.time}} : {{value.location}} </h1>
-<p> Ubicación: {{value.location}} </p>
-<p> Descripción: {{value.description}} </p>
+<div class="media">
+    <h3 class="h3-responsive font-weight-bold mr-3">{{ value.time }}</h3>
+    <div class="media-body mb-3">
+        <!--guion medio rojo extremo superior div-->
+        <!-- Aplicando funcion para ver en log -->
+        <mdb-badge type="button" (click)="handleDeleteClick()" danger="true" class="text-center float-right">-</mdb-badge>
+        <h6 class="mt-0 font-weight-bold">{{ value.subject }}</h6>
+        <hr class="hr-bold mb-0 my-2">
+        <p class="mb-0">
+            <mdb-icon fas icon="location-arrow"></mdb-icon>
+            {{ value.location }}
+        </p>
+    </div>
+</div>
+<!-- parrafo evalua si tiene una descripción o no... si la tiene muestra la descripción -->
+<p class="p-3 blue-grey lighten-5 blue-grey lighten-5" *ngIf="value.description">
+    {{ value.description }}
+</p>
