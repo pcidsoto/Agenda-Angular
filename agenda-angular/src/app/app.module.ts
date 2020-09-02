@@ -8,11 +8,13 @@ import { EventComponent } from './event/event.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModule } from 'angular-bootstrap-md'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WeatherWidgetMainComponent } from './components/weather-widget-main/weather-widget-main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventComponent
+    EventComponent,
+    WeatherWidgetMainComponent
   ],
   imports: [
     BrowserModule,

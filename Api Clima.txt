@@ -1,0 +1,9 @@
+
+registrarse en https://openweathermap.org/
+
+generar nuevo componente
+    ng g c components/weather-widget-main
+
+anclar en la pagina donde se mostrará el clima:
+    <app-weather-widget-main></app-weather-widget-main>
+
