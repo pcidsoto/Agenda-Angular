@@ -12,6 +12,7 @@ export class WeatherWidgetMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+   
     this.getWeatherData();
     console.log(this.WeatherData);
   }
@@ -34,6 +35,9 @@ export class WeatherWidgetMainComponent implements OnInit {
     let currentDate = new Date();
     //this.WeatherData.isDay = (currentDate.getTime() < sunsetTime.getTime());
     this.WeatherData.isDay = false;
+    let weather = this.WeatherData.weather[0];
+    this.WeatherData.weather = weather;
+    this.WeatherData.icon = this.WeatherData.weather.icon;
     this.WeatherData.temp_celcius = (this.WeatherData.main.temp - 273.15).toFixed(0);
     this.WeatherData.temp_min = (this.WeatherData.main.temp_min - 273.15).toFixed(0);
     this.WeatherData.temp_max = (this.WeatherData.main.temp_max - 273.15).toFixed(0);

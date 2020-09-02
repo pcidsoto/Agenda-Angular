@@ -1,4 +1,5 @@
 <div id="divWatherMain" class="text-center">
+    <!--
     <div class="weatherWidgetRow" *ngIf="WeatherData.isDay" >
         <i class="fas fa-1x fa-sun sun"></i>
     </div>
@@ -8,9 +9,16 @@
     <div class="weatherWidgetRow cloudDiv" >
         <i class="fas fa-1x fa-cloud cloud"></i>
     </div>
+    -->
+    <div class="weatherWidgetRow">
+        <img class="iconCentral" src="http://openweathermap.org/img/wn/{{WeatherData.icon}}@2x.png" alt="">
+    </div>
+    <div class="weatherWidgetRow cloudDiv">
+        <img class="cloud" src="http://openweathermap.org/img/wn/{{WeatherData.icon}}.png" alt="">
+    </div>
     <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{ WeatherData.temp_celcius }}º</div>
     <div class="weatherWidgetRow" style="font-size: 12px;">{{ WeatherData.temp_min }}º / {{ WeatherData.temp_max }}º</div>
     <div class="weatherWidgetRow" style="font-size: 12px;">Sensación Térmica: {{ WeatherData.temp_max }}º</div>
-    <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 15px;">{{ WeatherData.name }}</div>
+    <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 15px;">{{ WeatherData.name }},{{ WeatherData.sys.country }}</div>
     <div class="weatherWidgetRow" style="font-size: 12px;margin-top: 5px;">Humedad: {{ WeatherData.main.humidity }}%</div>
 </div>
